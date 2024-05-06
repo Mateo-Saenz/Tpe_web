@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --color1: #58A9BB;
+    --color2: #338DA2;
+    --color3: #178098;
+    --color4: #07677E;
+    --color5: #035163;
+    --color-gris-100: rgba(20, 24, 31, 0.05);
+    --color-gris-200: rgba(20, 24, 31, 0.1);
+    --color-gris-300: rgba(20, 24, 31, 0.25);
+    --color-gris-500: rgba(20, 24, 31, 0.5);
+    --color-gris-700: rgb(37, 37, 65);
+    --color-gris-900: rgb(12, 12, 34);
+
+    --color-bg: #f2f2ff;
+
+    --radio-1: 0.3rem;
+    --radio-2: 0.6rem;
+    --radio-3: 1rem;
+    --radio-4: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--color-bg);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+a {
+    color: var(--color-gris-700);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-gris-900);
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.9rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    line-height: 1.25;
+}
+
+h4 {
+    font-size: 1.1rem;
+}
+
+h5 {
+    line-height: 1.4;
+}
+
+
+section {
+    margin-top: 6rem;
+}
+
+
+
+/*  ----------------------- NAVBAR -----------------------*/
+
+
