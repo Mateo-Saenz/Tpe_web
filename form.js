@@ -1,6 +1,6 @@
 "use strict"
 
-let inputCaptcha= document.querySelector(".inp-captcha");
+let inputCaptcha= document.querySelector(".inp-captcha"); //class par el imput del captcha
 
 let captchas=[{identificador:1, valor: ""}, {identificador:2, valor: ""},{identificador:3, valor:""}] //valores de las imágenes de los captchas
 
@@ -9,12 +9,12 @@ cambiarCaptcha();
 let form= document.querySelector("#form");
 form.addEventListener("submint", verificarCaptcha);
 
-let recarga= document.querySelector("img-recargar");
+let recarga= document.querySelector(".img-recargar"); //div con la imagen
 recarga.addEventListener("click", cambiarCaptcha);
 
 function cambiarCaptcha(){
     let captcha=Math.floor(Math.random()*captchas.length+1);
-    document.querySelector(".img-captcha").src=...+captcha+ ".jpg"; //tengo que poner de donde proviene la imagen
+    document.querySelector(".img-captcha").src=...+captcha+ ".jpg"; //tengo que poner de donde proviene la imagen. Nombre de la imagen 1,2,3
 
 }
 
@@ -35,7 +35,7 @@ function verificarCaptcha(event){
     event.preventDefault();
     let text=document.querySelector('.inp-captcha');
     if (text=="")
-        document.querySelector(".alerta").innerHTML= "Ingresar código de seguridad para enviar el formulario";
+        document.querySelector(".alerta").innerHTML= "Ingresar código de seguridad para enviar el formulario";  //.alerta div con un p
     else
         if(existeCaptcha(text)==true){
             document.querySelector(".alerta").innerHTML="El formulario se envió correctamente";
@@ -66,6 +66,6 @@ function agregar(event){
     let email= formData.get('email');
     let tel= formData.get('telefono');
     let mensaje= formData.get('mensaje');
-    console.log("Nombre: ${'nombre'}, Apellido:${'apellido'}, E-Mail: ${'email'} , Teléfono: ${'tel'}, Mensaje: ${'mensaje'}");
+    console.log(`Nombre: ${'nombre'}, Apellido:${'apellido'}, E-Mail: ${'email'} , Teléfono: ${'tel'}, Mensaje: ${'mensaje'}`);
 
 }
