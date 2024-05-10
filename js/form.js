@@ -4,40 +4,51 @@ let inputCaptcha= document.querySelector(".inp-captcha"); //class par el imput d
 
 let captchas=[{identificador:1, valor: "pdw38"}, {identificador:2, valor: "2en7g"},{identificador:3, valor:"8fexn"}] //valores de las imágenes de los captchas
 
+let captcha;
+
 cambiarCaptcha();
 
 let form= document.querySelector("#form");
-form.addEventListener("submint", verificarCaptcha);
+form.addEventListener("submit", verificarCaptcha);
 
 let recarga= document.querySelector(".img-recargar"); //div con la imagen recargar
 recarga.addEventListener("click", cambiarCaptcha);
 
 function cambiarCaptcha(){
-    let captcha=Math.floor(Math.random()*captchas.length+1);
+    captcha=Math.floor(Math.random()*captchas.length+1);
     document.querySelector(".img-captcha").src="../img/captcha" +captcha+ ".jpg"; //tengo que poner de donde proviene la imagen. Nombre de la imagen 1,2,3
 
 }
 
 function existeCaptcha (text){
-   let encontrado=false;
-   captchas.forEach(function(c){
-        if ((text===c.valor)&&(captcha==c.identificador)){
-            encontrado=true;
-            return;
-        }
-    });
-        return encontrado;
+    for (let c of captchas){
+        if((text== c.valor))
+            return true;
+    }
+    return false;
 }
+//function existeCaptcha (text){
+//   let encontrado=false;
+// //  captchas.forEach(function(c){
+//        let captcha=
+//        if ((text===c.valor)&&(captcha==c.identificador)){
+//            encontrado=true;
+//            return;
+//        }
+//    });
+//        return encontrado;
+//}
 
 
 
 function verificarCaptcha(event){
     event.preventDefault();
-    let text=document.querySelector('.inp-captcha');
+    let text=document.querySelector('.inp-captcha').value;
     if (text=="")
         document.querySelector(".alerta").innerHTML= "Ingresar código de seguridad para enviar el formulario";  //.alerta div con un p
     else
         if(existeCaptcha(text)==true){
+            agregar(event);
             document.querySelector(".alerta").innerHTML="El formulario se envió correctamente";
             form.reset();
         }
