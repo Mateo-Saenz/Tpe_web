@@ -1,8 +1,7 @@
 "use strict"
 
-let inputCaptcha= document.querySelector(".inp-captcha"); //class par el imput del captcha
-
-let captchas=[{identificador:1, valor: "pdw38"}, {identificador:2, valor: "2en7g"},{identificador:3, valor:"8fexn"}] //valores de las imágenes de los captchas
+let inputCaptcha= document.querySelector(".inp-captcha"); 
+let captchas=[{identificador:1, valor: "pdw38"}, {identificador:2, valor: "2en7g"},{identificador:3, valor:"8fexn"}] 
 
 let captcha;
 
@@ -11,12 +10,12 @@ cambiarCaptcha();
 let form= document.querySelector("#form");
 form.addEventListener("submit", verificarCaptcha);
 
-let recarga= document.querySelector(".img-recargar"); //div con la imagen recargar
+let recarga= document.querySelector(".img-recargar"); 
 recarga.addEventListener("click", cambiarCaptcha);
 
 function cambiarCaptcha(){
     captcha=Math.floor(Math.random()*captchas.length+1);
-    document.querySelector(".img-captcha").src="../img/captcha" +captcha+ ".jpg"; //tengo que poner de donde proviene la imagen. Nombre de la imagen 1,2,3
+    document.querySelector(".img-captcha").src="../img/captcha" +captcha+ ".jpg"; 
 
 }
 
@@ -27,25 +26,12 @@ function existeCaptcha (text){
     }
     return false;
 }
-//function existeCaptcha (text){
-//   let encontrado=false;
-// //  captchas.forEach(function(c){
-//        let captcha=
-//        if ((text===c.valor)&&(captcha==c.identificador)){
-//            encontrado=true;
-//            return;
-//        }
-//    });
-//        return encontrado;
-//}
-
-
 
 function verificarCaptcha(event){
     event.preventDefault();
     let text=document.querySelector('.inp-captcha').value;
     if (text=="")
-        document.querySelector(".alerta").innerHTML= "Ingresar código de seguridad para enviar el formulario";  //.alerta div con un p
+        document.querySelector(".alerta").innerHTML= "Ingresar código de seguridad para enviar el formulario";  
     else
         if(existeCaptcha(text)==true){
             agregar(event);
@@ -58,15 +44,6 @@ function verificarCaptcha(event){
         }
     cambiarCaptcha();
 }
-
-
-
-    //si el texto ingresado es vacío ingresar el captcha para enviar formulario
-    //sino si existeCaptcha agrego los datos del form (los puedo mostrar por consola) y muestro un mensaje SIN usar alert de que
-    //el formulario se envió con éxito
-    //si no existe el captcha mostrar mensaje de captcha incorrecto, cambiar capcha.
-
-    //Antes de terminar la función cambio el captcha
 
 
 function agregar(event){
