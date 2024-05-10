@@ -36,11 +36,7 @@ body {
     line-height: 1.6;
 }
 
-img {
-    display: block;
-    object-fit: cover;
-    width: 100%;
-}
+
 a {
     color: var(--color-gris-700);
     text-decoration: none;
@@ -86,3 +82,75 @@ section {
 /*  ----------------------- NAVBAR -----------------------*/
 
 
+.navbar {
+    background-color: var(--color5);
+}
+
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__boton {
+    position: absolute;
+    right: 2rem;
+    top: 5.5rem;
+}
+
+.nav__boton:hover {
+    cursor: pointer;
+}
+
+.nav__boton img {
+    width: 2rem;
+}
+
+
+.nav__logo {
+    width: 15rem;
+}
+
+
+
+
+/*  ----------------------- ABOUT US -----------------------*/
+
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/*  ----------------------- FOOTER -----------------------*/
+
+.footer {
+    background-color: var(--color5);
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footer__container p {
+    margin-bottom: .3rem;
+    font-size: 1.2rem;
+}
+
+.footer__redes {
+    display: flex;
+    justify-content: space-around;
+}
