@@ -54,6 +54,6 @@ function agregar(event){
     let email= formData.get('email');
     let tel= formData.get('telefono');
     let mensaje= formData.get('mensaje');
-    console.log(`Nombre: ${'nombre'}, Apellido:${'apellido'}, E-Mail: ${'email'} , Teléfono: ${'tel'}, Mensaje: ${'mensaje'}`);
+    console.log(`Nombre: ${nombre}, Apellido:${apellido}, E-Mail: ${email} , Teléfono: ${tel}, Mensaje: ${mensaje}`);
 
 }

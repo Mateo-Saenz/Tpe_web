@@ -77,11 +77,107 @@ section {
     margin-top: 6rem;
 }
 
+/*---Mobile First---*/
+
+body {
+    width: 100%;
+    margin: 0%;
+    font-size: 120%;
+    font-family:"Poppins", sans-serif;
+}
+.nav_boton {
+    margin-top: 2%;
+    width: 25%;
+}
+.menu {
+    display: none;
+}
+
+.show {
+    padding: 10% 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    position: -webkit-sticky;
+}
+
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.item-nav:hover{
+    background-color: var(--color4);
+
+}
+
+
+
+/*---small and medium devices---*/
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    /*HEADER*/
+
+    /*NAV*/
+    .menuHamburguesa {
+        display: none;
+    }
+    nav{
+        width: 100%;
+        position: sticky;
+        top: 0%;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgb(33, 51, 67);
+        align-items: center;
+        margin: 0%;
+        padding-left: 0%;
+    } 
+    /*BODY*/
+    /*FOOTER*/ 
+
+}
+
+/*---large and extra large devices---*/
+
+@media screen and (min-width:1024px) and (max-width:1440px){
+    /*HEADER*/
+
+
+    /*NAV*/
+    .menuHamburguesa  {
+        display: none;
+    }
+    nav{
+        width: 100%;
+        position: sticky;
+        top: 0%;
+        z-index: 1000;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgb(33, 51, 67);
+        align-items: center;
+        margin: 0%;
+        padding-left: 0%;
+    }
+    /*BODY*/
+    /*FOOTER*/
+}
 
 
 /*  ----------------------- NAVBAR -----------------------*/
 
-
+/*
 .navbar {
     background-color: var(--color5);
 }
@@ -91,49 +187,25 @@ section {
     display: flex;
     justify-content: space-between;
 }
-
-.nav__boton {
+*/
+.nav_boton {
     position: absolute;
     right: 2rem;
     top: 5.5rem;
 }
 
-.nav__boton:hover {
+.nav_boton:hover {
     cursor: pointer;
 }
 
-.nav__boton img {
+.nav_boton img {
     width: 2rem;
 }
 
 
-.nav__logo {
+.nav_logo {
     width: 15rem;
 }
-
-
-
-
-/*  ----------------------- ABOUT US -----------------------*/
-
-
-.about-us {
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-
-/*  ----------------------- FORM -----------------------*/
-
-
-.alerta{
-    padding: 1rem;
-}
-
-
 
 
 /*  ----------------------- FOOTER -----------------------*/

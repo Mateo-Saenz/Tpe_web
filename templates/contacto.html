@@ -8,24 +8,26 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="nav__container">   
-                <div>
-                    <a href="index.html">
-                        <img src="../img/logo.jpg" alt="" class="nav__logo">
-                    </a>
-                </div>
-                <button class="nav__boton">
-                    <img src="../img/burger_menu.svg" alt="">
-                </button>
-            </div>  
-        </nav>
+        <a href="../index.html"> <img class="nav_logo" src="../img/logoMusicStore.png" alt="logo-music-store"> </a>
     </header>
+        <nav>
+            <ul class="menuHamburguesa">
+                <li><a><img class="nav_boton" src="../img/burger_menu.svg" alt="Menú"></a></li>
+            </ul>
+    
+            <ul class="menu">
+                <li class ="item-nav"><a href="../index.html">Inicio</a></li>
+                <li class ="item-nav"><a href="violines.html">Violines</a></li>
+                <li class ="item-nav"><a href="accesorios.html">Accesorios</a></li>
+                <li class ="item-nav"><a href="contacto.html">Contacto</a></li>
+            </ul>
+    
+        </nav>
     <form id="form">
-        <input type="text" value="" placeholder="Nombre" required/>
-        <input type="text" value="" placeholder="Apellido" required/>
-        <input type="email" value="" placeholder="E-Mail" required/>
-        <input type="text" value="" placeholder="Teléfono"required/>
+        <input name="nombre" type="text" value="" placeholder="Nombre" required/>
+        <input name="apellido" type="text" value="" placeholder="Apellido" required/>
+        <input name="email" type="email" value="" placeholder="E-Mail" required/>
+        <input name="mensaje" type="text" value="" placeholder="Teléfono"required/>
         
         <div class="box-mensaje">
             <input type="text" value="" placeholder="Mensaje"/>
@@ -47,7 +49,7 @@
 
     </form>
 
-    <script type="text/javascript" src="../js/form.js"></script>
+ 
 
     <footer class="footer">
         <div class="footer__container">
@@ -71,5 +73,8 @@
             </div>
         </div>
     </footer>
+
+    <script type="text/javascript" src="../js/form.js"></script>
+    <script type="text/javascript" src="../js/nav.js"></script>
 </body>
 </html>

@@ -8,19 +8,21 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="nav__container">   
-                <div>
-                    <a href="index.html">
-                        <img src="./img/logoMusicStore.png" alt="" class="nav__logo">
-                    </a>
-                </div>
-                <button class="nav__boton">
-                    <img src="./img/burger_menu.svg" alt="">
-                </button>
-            </div>  
-        </nav>
+        <a href="index.html"> <img class="nav_logo" src="img/logoMusicStore.png" alt="logo-music-store"> </a>
     </header>
+        <nav>
+            <ul class="menuHamburguesa">
+                <li><a><img class="nav_boton" src="img/burger_menu.svg" alt="Menú"></a></li>
+            </ul>
+    
+            <ul class="menu">
+                <li class ="item-nav"><a href="index.html">Inicio</a></li>
+                <li class ="item-nav"><a href="templates/violines.html">Violines</a></li>
+                <li class ="item-nav"><a href="templates/accesorios.html">Accesorios</a></li>
+                <li class ="item-nav"><a href="templates/contacto.html">Contacto</a></li>
+            </ul>
+    
+        </nav>
 
     <div class="about-us">
         <h1 class="">
@@ -64,6 +66,7 @@
         </div>
     </footer>
 
+    <script type="text/javascript" src="js/nav.js"></script>
 
 </body>
 </html>
