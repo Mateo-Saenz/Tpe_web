@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css">
     <title>Music Store</title>
 </head>
+
 <body>
     <header>
         <a href="../index.html"> <img class="nav_logo" src="../img/logoMusicStore.png" alt="logo-music-store"> </a>
     </header>
-        <nav>
-            <ul class="menuHamburguesa">
-                <li><a><img class="nav_boton" src="../img/burger_menu.svg" alt="Menú"></a></li>
-            </ul>
-    
-            <ul class="menu">
-                <li class ="item-nav"><a href="../index.html">Inicio</a></li>
-                <li class ="item-nav"><a href="violines.html">Violines</a></li>
-                <li class ="item-nav"><a href="accesorios.html">Accesorios</a></li>
-                <li class ="item-nav"><a href="contacto.html">Contacto</a></li>
-            </ul>
-    
-        </nav>
-    <form id="form">
-        <input name="nombre" type="text" value="" placeholder="Nombre" required/>
-        <input name="apellido" type="text" value="" placeholder="Apellido" required/>
-        <input name="email" type="email" value="" placeholder="E-Mail" required/>
-        <input name="mensaje" type="text" value="" placeholder="Teléfono"required/>
-        
-        <div class="box-mensaje">
-            <input type="text" value="" placeholder="Mensaje"/>
-        </div>
-        
-        <div>
-            <img class="img-captcha" src="">
-        </div>
-            
-        <div class="img-recargar">
-            <img src="../img/img-recargar.svg" alt="">
-        </div>
+    <nav>
+        <ul class="menuHamburguesa">
+            <li><a><img class="nav_boton" src="../img/burger_menu.svg" alt="Menú"></a></li>
+        </ul>
 
-        <input class="inp-captcha" type="text" value="">
-       
-        <input type="submit" value="Enviar">
+        <ul class="menu">
+            <li class="item-nav"><a href="../index.html">Inicio</a></li>
+            <li class="item-nav"><a href="violines.html">Violines</a></li>
+            <li class="item-nav"><a href="accesorios.html">Accesorios</a></li>
+            <li class="item-nav"><a href="contacto.html">Contacto</a></li>
+        </ul>
 
-        <div class="alerta"> </div>
+    </nav>
+    <main>
+        <form id="form">
+            <input name="nombre" type="text" value="" placeholder="Nombre" required />
+            <input name="apellido" type="text" value="" placeholder="Apellido" required />
+            <input name="email" type="email" value="" placeholder="E-Mail" required />
+            <input name="telefono" type="number" value="" placeholder="Teléfono" required />
 
-    </form>
+            <div class="box-mensaje">
+                <input type="text" value="" placeholder="Mensaje" />
+            </div>
 
- 
+            <div>
+                <img class="img-captcha" src="">
+            </div>
+
+            <div class="img-recargar">
+                <img src="../img/img-recargar.svg" alt="">
+            </div>
+
+            <input class="inp-captcha" type="text" value="">
+
+            <input type="submit" value="Enviar">
+
+            <div class="alerta"> </div>
+
+        </form>
+    </main>
+
+
+
 
     <footer class="footer">
         <div class="footer__container">
@@ -77,4 +82,5 @@
     <script type="text/javascript" src="../js/form.js"></script>
     <script type="text/javascript" src="../js/nav.js"></script>
 </body>
+
 </html>
